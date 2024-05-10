@@ -4,7 +4,6 @@ import { addPizza, deletePizza } from "../features/Cart/cartSlice";
 
 /* eslint-disable react/prop-types */
 function MenuItem({ pizza }) {
-  // const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
   const item = {
     id: pizza.id,

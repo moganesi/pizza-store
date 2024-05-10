@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import { formatCurrency } from "../utils/helpers";
+import LoggedInUser from "./LoggedInUser";
 
 function Cart() {
   const cart = useSelector((state) => state.cart.cart);
@@ -10,6 +11,7 @@ function Cart() {
 
   return (
     <div>
+      <LoggedInUser />
       <ul>
         {cart.map((item) => (
           <li key={item.id}>{<CartItem pizza={item} />}</li>

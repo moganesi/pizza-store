@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { getPizzas } from "../services/apiRestaurant";
 import MenuItem from "./MenuItem";
 import MiniCart from "./MiniCart";
+import LoggedInUser from "./LoggedInUser";
 function Menu() {
   const {
     data: pizzas,
@@ -15,6 +16,7 @@ function Menu() {
   return (
     <>
       <MiniCart />
+      <LoggedInUser />
       <ul>
         {pizzas.map((pizza) => (
           <li key={pizza.id}>
